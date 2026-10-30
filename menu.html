@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,135 +5,442 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore the delicious menu at Food Hub Restaurant.">
     <meta name="theme-color" content="#171717">
+
     <title>Our Menu | Food Hub Restaurant</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
+
 <body>
+
 <header class="header">
     <nav class="navbar container">
+
         <a href="index.html" class="logo">FOOD<span>HUB.</span></a>
-        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html" class="active">Our Menu</a></li>
+            <li><a href="index.html#offers">Offers</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+
         <div class="nav-actions">
-            <a href="#menu-items" class="cart-link">Cart <span class="cart-count">0</span></a>
-            <a href="contact.html#reservation" class="btn btn-primary nav-book">Book a Table ↗</a>
+            <a href="#menu-items" class="cart-link">
+                Cart <span class="cart-count">0</span>
+            </a>
+
+            <a href="contact.html#reservation" class="btn btn-primary nav-book">
+                Book a Table ↗
+            </a>
         </div>
+
     </nav>
 </header>
 
 <main>
+
+    <!-- MENU HERO SECTION -->
     <section class="page-hero menu-hero">
         <div class="container page-hero-content">
-            <span class="eyebrow light-eyebrow">MADE FRESH. SERVED WITH LOVE.</span>
+
+            <span class="eyebrow light-eyebrow">
+                MADE FRESH. SERVED WITH LOVE.
+            </span>
+
             <h1>Our Delicious <span>Menu.</span></h1>
-            <p>Explore our selection of mouthwatering dishes, crafted to make every bite unforgettable.</p>
-            <span class="breadcrumb"><a href="index.html">Home</a> / Our Menu</span>
+
+            <p>
+                Explore our selection of mouthwatering dishes,
+                crafted to make every bite unforgettable.
+            </p>
+
+            <span class="breadcrumb">
+                <a href="index.html">Home</a> / Our Menu
+            </span>
+
         </div>
     </section>
 
+
+    <!-- MENU SECTION -->
     <section class="menu-section section-padding" id="menu-items">
+
         <div class="container">
+
             <div class="section-heading menu-heading">
-                <div><span class="eyebrow">EXPLORE OUR FOOD</span><h2>Find Your <span>Favourite</span></h2></div>
+
+                <div>
+                    <span class="eyebrow">EXPLORE OUR FOOD</span>
+                    <h2>Find Your <span>Favourite</span></h2>
+                </div>
+
                 <p>Fresh flavours, delicious choices.</p>
+
             </div>
 
+
+            <!-- MENU FILTER BUTTONS -->
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Dishes</button>
-                <button class="filter-btn" data-filter="starter">Starters</button>
-                <button class="filter-btn" data-filter="main">Main Course</button>
-                <button class="filter-btn" data-filter="pizza">Pizza</button>
-                <button class="filter-btn" data-filter="dessert">Desserts</button>
-                <button class="filter-btn" data-filter="drinks">Drinks</button>
+
+                <button class="filter-btn active" data-filter="all">
+                    All Dishes
+                </button>
+
+                <button class="filter-btn" data-filter="starter">
+                    Starters
+                </button>
+
+                <button class="filter-btn" data-filter="main">
+                    Main Course
+                </button>
+
+                <button class="filter-btn" data-filter="pizza">
+                    Pizza
+                </button>
+
+                <button class="filter-btn" data-filter="dessert">
+                    Desserts
+                </button>
+
+                <button class="filter-btn" data-filter="drinks">
+                    Drinks
+                </button>
+
             </div>
 
+
+            <!-- FOOD ITEMS -->
             <div class="food-grid menu-grid">
-                <article class="food-card reveal" data-category="starter">
-                    <div class="food-image"><img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?auto=format&fit=crop&w=700&q=80" alt="Crispy garlic bread" loading="lazy"><span class="food-label">POPULAR</span></div>
-                    <div class="food-info"><div><h3>Crispy Garlic Bread</h3><span>Toasted bread, garlic butter</span></div><div class="food-price">₹149</div></div>
-                    <button class="add-cart" data-name="Crispy Garlic Bread" data-price="149">Add to Cart +</button>
-                </article>
 
                 <article class="food-card reveal" data-category="starter">
-                    <div class="food-image"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80" alt="Vegetable spring rolls" loading="lazy"></div>
-                    <div class="food-info"><div><h3>Veg Spring Rolls</h3><span>Crispy rolls with fresh vegetables</span></div><div class="food-price">₹179</div></div>
-                    <button class="add-cart" data-name="Veg Spring Rolls" data-price="179">Add to Cart +</button>
+
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?auto=format&fit=crop&w=700&q=80" alt="Crispy garlic bread" loading="lazy">
+                        <span class="food-label">POPULAR</span>
+                    </div>
+
+                    <div class="food-info">
+                        <div>
+                            <h3>Crispy Garlic Bread</h3>
+                            <span>Toasted bread, garlic butter</span>
+                        </div>
+                        <div class="food-price">₹149</div>
+                    </div>
+
+                    <button class="add-cart" data-name="Crispy Garlic Bread" data-price="149">
+                        Add to Cart +
+                    </button>
+
                 </article>
+
+
+                <article class="food-card reveal" data-category="starter">
+
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80" alt="Vegetable spring rolls" loading="lazy">
+                    </div>
+
+                    <div class="food-info">
+                        <div>
+                            <h3>Veg Spring Rolls</h3>
+                            <span>Crispy rolls with fresh vegetables</span>
+                        </div>
+                        <div class="food-price">₹179</div>
+                    </div>
+
+                    <button class="add-cart" data-name="Veg Spring Rolls" data-price="179">
+                        Add to Cart +
+                    </button>
+
+                </article>
+
 
                 <article class="food-card reveal" data-category="main">
-                    <div class="food-image"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=700&q=80" alt="Classic cheese burger" loading="lazy"><span class="food-label">BESTSELLER</span></div>
-                    <div class="food-info"><div><h3>Classic Cheese Burger</h3><span>Beef patty, cheddar, fresh lettuce</span></div><div class="food-price">₹249</div></div>
-                    <button class="add-cart" data-name="Classic Cheese Burger" data-price="249">Add to Cart +</button>
+
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=700&q=80" alt="Classic cheese burger" loading="lazy">
+                        <span class="food-label">BESTSELLER</span>
+                    </div>
+
+                    <div class="food-info">
+                        <div>
+                            <h3>Classic Cheese Burger</h3>
+                            <span>Beef patty, cheddar, fresh lettuce</span>
+                        </div>
+                        <div class="food-price">₹249</div>
+                    </div>
+
+                    <button class="add-cart" data-name="Classic Cheese Burger" data-price="249">
+                        Add to Cart +
+                    </button>
+
                 </article>
+
 
                 <article class="food-card reveal" data-category="main">
-                    <div class="food-image"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80" alt="Creamy Italian pasta" loading="lazy"></div>
-                    <div class="food-info"><div><h3>Creamy Italian Pasta</h3><span>Rich white sauce, herbs, parmesan</span></div><div class="food-price">₹299</div></div>
-                    <button class="add-cart" data-name="Creamy Italian Pasta" data-price="299">Add to Cart +</button>
+
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80" alt="Creamy Italian pasta" loading="lazy">
+                    </div>
+
+                    <div class="food-info">
+                        <div>
+                            <h3>Creamy Italian Pasta</h3>
+                            <span>Rich white sauce, herbs, parmesan</span>
+                        </div>
+                        <div class="food-price">₹299</div>
+                    </div>
+
+                    <button class="add-cart" data-name="Creamy Italian Pasta" data-price="299">
+                        Add to Cart +
+                    </button>
+
                 </article>
+
 
                 <article class="food-card reveal" data-category="pizza">
-                    <div class="food-image"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80" alt="Farmhouse pizza" loading="lazy"><span class="food-label">CHEF'S PICK</span></div>
-                    <div class="food-info"><div><h3>Farmhouse Pizza</h3><span>Fresh vegetables, mozzarella</span></div><div class="food-price">₹349</div></div>
-                    <button class="add-cart" data-name="Farmhouse Pizza" data-price="349">Add to Cart +</button>
+
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80" alt="Farmhouse pizza" loading="lazy">
+                        <span class="food-label">CHEF'S PICK</span>
+                    </div>
+
+                    <div class="food-info">
+                        <div>
+                            <h3>Farmhouse Pizza</h3>
+                            <span>Fresh vegetables, mozzarella</span>
+                        </div>
+                        <div class="food-price">₹349</div>
+                    </div>
+
+                    <button class="add-cart" data-name="Farmhouse Pizza" data-price="349">
+                        Add to Cart +
+                    </button>
+
                 </article>
+
 
                 <article class="food-card reveal" data-category="pizza">
-                    <div class="food-image"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80" alt="Margherita pizza" loading="lazy"></div>
-                    <div class="food-info"><div><h3>Classic Margherita</h3><span>Tomato, mozzarella, fresh basil</span></div><div class="food-price">₹299</div></div>
-                    <button class="add-cart" data-name="Classic Margherita" data-price="299">Add to Cart +</button>
+
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80" alt="Margherita pizza" loading="lazy">
+                    </div>
+
+                    <div class="food-info">
+                        <div>
+                            <h3>Classic Margherita</h3>
+                            <span>Tomato, mozzarella, fresh basil</span>
+                        </div>
+                        <div class="food-price">₹299</div>
+                    </div>
+
+                    <button class="add-cart" data-name="Classic Margherita" data-price="299">
+                        Add to Cart +
+                    </button>
+
                 </article>
+
 
                 <article class="food-card reveal" data-category="dessert">
-                    <div class="food-image"><img src="https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&w=700&q=80" alt="Chocolate dessert" loading="lazy"></div>
-                    <div class="food-info"><div><h3>Chocolate Brownie</h3><span>Warm brownie, chocolate sauce</span></div><div class="food-price">₹169</div></div>
-                    <button class="add-cart" data-name="Chocolate Brownie" data-price="169">Add to Cart +</button>
+
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&w=700&q=80" alt="Chocolate dessert" loading="lazy">
+                    </div>
+
+                    <div class="food-info">
+                        <div>
+                            <h3>Chocolate Brownie</h3>
+                            <span>Warm brownie, chocolate sauce</span>
+                        </div>
+                        <div class="food-price">₹169</div>
+                    </div>
+
+                    <button class="add-cart" data-name="Chocolate Brownie" data-price="169">
+                        Add to Cart +
+                    </button>
+
                 </article>
+
 
                 <article class="food-card reveal" data-category="dessert">
-                    <div class="food-image"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80" alt="Strawberry cheesecake" loading="lazy"></div>
-                    <div class="food-info"><div><h3>Strawberry Cheesecake</h3><span>Rich cream cheese, strawberry</span></div><div class="food-price">₹199</div></div>
-                    <button class="add-cart" data-name="Strawberry Cheesecake" data-price="199">Add to Cart +</button>
+
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80" alt="Strawberry cheesecake" loading="lazy">
+                    </div>
+
+                    <div class="food-info">
+                        <div>
+                            <h3>Strawberry Cheesecake</h3>
+                            <span>Rich cream cheese, strawberry</span>
+                        </div>
+                        <div class="food-price">₹199</div>
+                    </div>
+
+                    <button class="add-cart" data-name="Strawberry Cheesecake" data-price="199">
+                        Add to Cart +
+                    </button>
+
                 </article>
 
-                <article class="food-card reveal" data-category="drinks">
-                    <div class="food-image"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80" alt="Fresh fruit drink" loading="lazy"></div>
-                    <div class="food-info"><div><h3>Fresh Fruit Cooler</h3><span>Seasonal fruits, fresh mint</span></div><div class="food-price">₹129</div></div>
-                    <button class="add-cart" data-name="Fresh Fruit Cooler" data-price="129">Add to Cart +</button>
-                </article>
 
                 <article class="food-card reveal" data-category="drinks">
-                    <div class="food-image"><img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=700&q=80" alt="Iced coffee" loading="lazy"></div>
-                    <div class="food-info"><div><h3>Classic Iced Coffee</h3><span>Cold brewed coffee, milk</span></div><div class="food-price">₹149</div></div>
-                    <button class="add-cart" data-name="Classic Iced Coffee" data-price="149">Add to Cart +</button>
+
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80" alt="Fresh fruit drink" loading="lazy">
+                    </div>
+
+                    <div class="food-info">
+                        <div>
+                            <h3>Fresh Fruit Cooler</h3>
+                            <span>Seasonal fruits, fresh mint</span>
+                        </div>
+                        <div class="food-price">₹129</div>
+                    </div>
+
+                    <button class="add-cart" data-name="Fresh Fruit Cooler" data-price="129">
+                        Add to Cart +
+                    </button>
+
                 </article>
+
+
+                <article class="food-card reveal" data-category="drinks">
+
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=700&q=80" alt="Iced coffee" loading="lazy">
+                    </div>
+
+                    <div class="food-info">
+                        <div>
+                            <h3>Classic Iced Coffee</h3>
+                            <span>Cold brewed coffee, milk</span>
+                        </div>
+                        <div class="food-price">₹149</div>
+                    </div>
+
+                    <button class="add-cart" data-name="Classic Iced Coffee" data-price="149">
+                        Add to Cart +
+                    </button>
+
+                </article>
+
             </div>
 
+
+            <!-- CART SUMMARY -->
             <div class="cart-summary" id="cart-summary" aria-live="polite">
-                <div><span>Your Cart</span><h3><span id="cart-items">0</span> items · ₹<span id="cart-total">0</span></h3></div>
-                <button class="btn btn-primary" id="view-cart">View Order</button>
+
+                <div>
+                    <span>Your Cart</span>
+                    <h3>
+                        <span id="cart-items">0</span> items · ₹<span id="cart-total">0</span>
+                    </h3>
+                </div>
+
+                <button class="btn btn-primary" id="view-cart">
+                    View Order
+                </button>
+
+
+                <!-- FOOD HUB COUPON BOX -->
+                <div class="foodhub-coupon">
+
+                    <h3>Have a Coupon Code?</h3>
+
+                    <p>Apply your coupon and enjoy delicious savings!</p>
+
+                    <input
+                        type="text"
+                        id="coupon-code"
+                        placeholder="Enter coupon code"
+                        aria-label="Enter coupon code"
+                    >
+
+                    <label class="delivery-option">
+                        <input type="checkbox" id="delivery-order">
+                        This is a delivery order
+                    </label>
+
+                    <button type="button" id="apply-coupon" class="btn btn-primary">
+                        Apply Coupon
+                    </button>
+
+                    <p id="coupon-message" aria-live="polite"></p>
+
+                    <small>
+                        WED50: Wednesday only, first-time customers, delivery orders.
+                        Maximum 3 coupon applications in this demo.
+                    </small>
+
+                </div>
+                <!-- END FOOD HUB COUPON BOX -->
+
             </div>
+
         </div>
+
     </section>
+
 </main>
 
+
+<!-- FOOTER -->
 <footer class="footer">
+
     <div class="container footer-grid">
-        <div><a href="index.html" class="logo footer-logo">FOOD<span>HUB.</span></a><p>Good food, great memories.<br>Making every meal special.</p></div>
-        <div><h3>Quick Links</h3><a href="index.html">Home</a><a href="menu.html">Our Menu</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
-        <div><h3>Opening Hours</h3><p>Monday – Friday: 11 AM – 10 PM</p><p>Saturday – Sunday: 10 AM – 11 PM</p></div>
-        <div><h3>Get In Touch</h3><p>New Delhi, India</p><p>+91 98765 43210</p><p>hello@foodhub.com</p></div>
+
+        <div>
+            <a href="index.html" class="logo footer-logo">FOOD<span>HUB.</span></a>
+            <p>
+                Good food, great memories.<br>
+                Making every meal special.
+            </p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Our Menu</a>
+            <a href="index.html#offers">Offers</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+            <h3>Opening Hours</h3>
+            <p>Monday – Friday: 11 AM – 10 PM</p>
+            <p>Saturday – Sunday: 10 AM – 11 PM</p>
+        </div>
+
+        <div>
+            <h3>Get In Touch</h3>
+            <p>New Delhi, India</p>
+            <p>+91 98765 43210</p>
+            <p>hello@foodhub.com</p>
+        </div>
+
     </div>
-    <div class="container footer-bottom"><span>© 2026 Food Hub Restaurant. All rights reserved.</span><span>Made with ♥ for food lovers.</span></div>
+
+    <div class="container footer-bottom">
+        <span>© 2026 Food Hub Restaurant. All rights reserved.</span>
+        <span>Made with ♥ for food lovers.</span>
+    </div>
+
 </footer>
+
 </body>
 </html>

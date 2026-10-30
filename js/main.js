@@ -1,4 +1,3 @@
-
 /* =========================================
    FOOD HUB RESTAURANT
    Main JavaScript
@@ -28,8 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         document.addEventListener("click", event => {
-            if (!menuToggle.contains(event.target) &&
-                !navLinks.contains(event.target)) {
+            if (
+                !menuToggle.contains(event.target) &&
+                !navLinks.contains(event.target)
+            ) {
                 navLinks.classList.remove("open");
                 menuToggle.classList.remove("active");
                 menuToggle.setAttribute("aria-expanded", "false");
@@ -105,7 +106,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
         cart = JSON.parse(localStorage.getItem("foodHubCart")) || [];
-        if (!Array.isArray(cart)) cart = [];
+
+        if (!Array.isArray(cart)) {
+            cart = [];
+        }
     } catch {
         cart = [];
     }
@@ -116,6 +120,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartItemsElement = document.getElementById("cart-items");
     const cartTotalElement = document.getElementById("cart-total");
 
+    // Coupon state
+    let couponApplied = false;
+    let discountAmount = 0;
+
+    function getCartSubtotal() {
+        return cart.reduce(
+            (sum, item) => sum + item.price * item.quantity,
+            0
+        );
+    }
+
     function saveCart() {
         try {
             localStorage.setItem("foodHubCart", JSON.stringify(cart));
@@ -125,13 +140,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function updateCart() {
+
         const totalItems = cart.reduce(
-            (sum, item) => sum + item.quantity, 0
+            (sum, item) => sum + item.quantity,
+            0
         );
 
-        const totalPrice = cart.reduce(
-            (sum, item) => sum + item.price * item.quantity, 0
-        );
+        const subtotal = getCartSubtotal();
+
+        // Apply discount to the original subtotal only.
+        const finalTotal = couponApplied
+            ? Math.max(0, subtotal - discountAmount)
+            : subtotal;
 
         cartCounts.forEach(counter => {
             counter.textContent = totalItems;
@@ -142,10 +162,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (cartTotalElement) {
-            cartTotalElement.textContent = totalPrice;
+            cartTotalElement.textContent = finalTotal.toFixed(2);
         }
 
         saveCart();
+
+        // Update coupon discount when cart changes.
+        if (couponApplied) {
+            discountAmount = subtotal * 0.50;
+
+            if (cartTotalElement) {
+                cartTotalElement.textContent =
+                    (subtotal - discountAmount).toFixed(2);
+            }
+        }
     }
 
     addButtons.forEach(button => {
@@ -154,7 +184,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const name = button.dataset.name;
             const price = Number(button.dataset.price);
 
-            if (!name || !Number.isFinite(price) || price <= 0) return;
+            if (!name || !Number.isFinite(price) || price <= 0) {
+                return;
+            }
 
             const existingItem = cart.find(
                 item => item.name === name
@@ -173,6 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
             updateCart();
 
             const originalText = "Add to Cart +";
+
             button.textContent = "Added ✓";
             button.style.background = "#238449";
             button.style.color = "#fff";
@@ -206,11 +239,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 message += `${item.name} x ${item.quantity} = ₹${item.price * item.quantity}\n`;
             });
 
-            const total = cart.reduce(
-                (sum, item) => sum + item.price * item.quantity, 0
-            );
+            const subtotal = getCartSubtotal();
+            const discount = couponApplied ? subtotal * 0.50 : 0;
+            const finalTotal = subtotal - discount;
 
-            message += `\nTOTAL: ₹${total}`;
+            message += `\nSUBTOTAL: ₹${subtotal.toFixed(2)}`;
+
+            if (couponApplied) {
+                message += `\nWED50 DISCOUNT: -₹${discount.toFixed(2)}`;
+            }
+
+            message += `\nTOTAL: ₹${finalTotal.toFixed(2)}`;
+
             message += "\n\nThis is a demo cart. Online checkout is not connected.";
 
             alert(message);
@@ -218,14 +258,148 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // 6. RESERVATION FORM
+    // 6. WED50 COUPON SYSTEM
+
+    const couponInput = document.getElementById("coupon-code");
+    const deliveryCheckbox = document.getElementById("delivery-order");
+    const applyCouponButton = document.getElementById("apply-coupon");
+    const couponMessage = document.getElementById("coupon-message");
+
+    function showCouponMessage(message, type) {
+        if (!couponMessage) return;
+
+        couponMessage.textContent = message;
+        couponMessage.className = type;
+    }
+
+    if (applyCouponButton && couponInput && deliveryCheckbox) {
+
+        applyCouponButton.addEventListener("click", () => {
+
+            const couponCode = couponInput.value.trim().toUpperCase();
+
+            // Check if coupon is already applied.
+            if (couponApplied) {
+                showCouponMessage(
+                    "WED50 is already applied to your cart.",
+                    "success"
+                );
+                return;
+            }
+
+            // Check coupon code.
+            if (couponCode !== "WED50") {
+                showCouponMessage(
+                    "Invalid coupon code. Please enter WED50.",
+                    "error"
+                );
+                return;
+            }
+
+            // Check Wednesday.
+            const today = new Date().getDay();
+
+            if (today !== 3) {
+                showCouponMessage(
+                    "Sorry! WED50 coupon is valid only on Wednesdays.",
+                    "error"
+                );
+                return;
+            }
+
+            // Check delivery order.
+            if (!deliveryCheckbox.checked) {
+                showCouponMessage(
+                    "This coupon is valid only for delivery orders.",
+                    "error"
+                );
+                return;
+            }
+
+            // Check first-time customer.
+            let hasOrderedBefore = false;
+
+            try {
+                hasOrderedBefore =
+                    localStorage.getItem("foodHubHasOrdered") === "true";
+            } catch {
+                // Storage unavailable.
+            }
+
+            if (hasOrderedBefore) {
+                showCouponMessage(
+                    "Sorry! This coupon is available only for first-time customers.",
+                    "error"
+                );
+                return;
+            }
+
+            // Check usage limit.
+            let couponUses = 0;
+
+            try {
+                couponUses = Number(
+                    localStorage.getItem("foodHubWED50Uses") || 0
+                );
+            } catch {
+                couponUses = 0;
+            }
+
+            if (couponUses >= 3) {
+                showCouponMessage(
+                    "You have reached the maximum coupon usage limit.",
+                    "error"
+                );
+                return;
+            }
+
+            // Check cart.
+            const subtotal = getCartSubtotal();
+
+            if (subtotal <= 0) {
+                showCouponMessage(
+                    "Please add some food to your cart before applying the coupon.",
+                    "error"
+                );
+                return;
+            }
+
+            // Apply 50% discount.
+            couponApplied = true;
+            discountAmount = subtotal * 0.50;
+
+            try {
+                localStorage.setItem(
+                    "foodHubWED50Uses",
+                    String(couponUses + 1)
+                );
+            } catch {
+                // Coupon works for the current page session.
+            }
+
+            updateCart();
+
+            showCouponMessage(
+                "Congratulations! 50% discount applied successfully.",
+                "success"
+            );
+
+            couponInput.disabled = true;
+            applyCouponButton.disabled = true;
+        });
+    }
+
+
+    // 7. RESERVATION FORM
 
     const reservationForm = document.getElementById("reservation-form");
     const bookingDate = document.getElementById("booking-date");
     const formMessage = document.getElementById("form-message");
 
     if (bookingDate) {
+
         const today = new Date();
+
         const localDate = [
             today.getFullYear(),
             String(today.getMonth() + 1).padStart(2, "0"),
@@ -236,6 +410,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (reservationForm) {
+
         reservationForm.addEventListener("submit", event => {
 
             event.preventDefault();

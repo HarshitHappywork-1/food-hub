@@ -515,6 +515,112 @@ img {
     transform: scale(.97);
 }
 
+/* =========================================
+   HOMEPAGE OFFERS SECTION
+========================================= */
+
+.offers-section {
+    background: #f1ece4;
+    padding: 100px 0;
+}
+
+.offers-section .section-heading {
+    margin-bottom: 40px;
+}
+
+.offers-section .section-heading h2 {
+    font-family: var(--heading);
+    font-size: clamp(34px, 4vw, 48px);
+}
+
+.offers-section .section-heading h2 span {
+    color: var(--orange);
+    font-style: italic;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.offer-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 270px;
+    padding: 35px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--dark);
+    color: white;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.15);
+}
+
+.offer-card h3 {
+    font-family: var(--heading);
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.offer-card h3 span {
+    color: var(--orange);
+}
+
+.offer-card p {
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.offer-code {
+    display: inline-block;
+    width: fit-content;
+    padding: 9px 17px;
+    border: 1px dashed var(--orange);
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.offer-tag {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 6px 12px;
+    background: var(--orange);
+    color: white;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 3px;
+}
+
+.offer-card.featured {
+    background: var(--orange);
+}
+
+.offer-card.featured h3 span,
+.offer-card.featured .offer-code {
+    color: white;
+}
+
+.offer-card.featured .offer-code {
+    border-color: white;
+}
+
+.offer-card.featured p {
+    color: #fff0e8;
+}
+
 /* EXPERIENCE */
 
 .experience {
@@ -730,6 +836,8 @@ img {
     display: none;
 }
 
+/* CART SUMMARY */
+
 .cart-summary {
     margin-top: 45px;
     padding: 25px 30px;
@@ -740,6 +848,7 @@ img {
     justify-content: space-between;
     gap: 20px;
     border-radius: 5px;
+    flex-wrap: wrap;
 }
 
 .cart-summary > div > span {
@@ -754,6 +863,119 @@ img {
 
 .cart-summary h3 span {
     color: var(--orange);
+}
+
+/* COUPON SECTION */
+
+.cart-summary .foodhub-coupon {
+    flex-basis: 100%;
+    width: 100%;
+    min-width: 0;
+}
+
+.foodhub-coupon {
+    width: 100%;
+    margin-top: 25px;
+    padding: 30px;
+    background: #252525;
+    border: 1px solid #444;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.foodhub-coupon h3 {
+    font-family: var(--heading);
+    font-size: 25px;
+    color: var(--white);
+    margin: 0;
+}
+
+.foodhub-coupon > p {
+    color: #aaa;
+    font-size: 13px;
+    margin: 0;
+}
+
+.foodhub-coupon input[type="text"] {
+    width: 100%;
+    max-width: 420px;
+    padding: 14px 16px;
+    background: #fff;
+    color: var(--dark);
+    border: 1px solid #555;
+    border-radius: 4px;
+    outline: none;
+    font-size: 13px;
+    transition: var(--transition);
+}
+
+.foodhub-coupon input[type="text"]:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(244, 123, 53, 0.15);
+}
+
+.foodhub-coupon input[type="text"]::placeholder {
+    color: #999;
+}
+
+.foodhub-coupon .delivery-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ddd;
+    font-size: 13px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.foodhub-coupon .delivery-option input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--orange);
+    cursor: pointer;
+}
+
+.foodhub-coupon .btn {
+    width: fit-content;
+    min-width: 160px;
+    border: none;
+}
+
+.foodhub-coupon .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#coupon-message {
+    min-height: 0;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0;
+}
+
+#coupon-message:empty {
+    display: none;
+}
+
+#coupon-message.success {
+    color: #55d98b;
+}
+
+#coupon-message.error {
+    color: #ff7777;
+}
+
+.foodhub-coupon small {
+    display: block;
+    max-width: 550px;
+    color: #999;
+    font-size: 11px;
+    line-height: 1.7;
+    margin-top: 3px;
 }
 
 /* ABOUT */
@@ -1093,6 +1315,10 @@ img {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .offers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* RESPONSIVE MOBILE */
@@ -1302,6 +1528,35 @@ img {
         grid-template-columns: repeat(2, 1fr);
         gap: 35px 20px;
     }
+
+    .offers-section {
+        padding: 70px 0;
+    }
+
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-card {
+        min-height: 240px;
+    }
+
+    .foodhub-coupon {
+        padding: 22px 18px;
+        margin-top: 20px;
+    }
+
+    .foodhub-coupon h3 {
+        font-size: 22px;
+    }
+
+    .foodhub-coupon input[type="text"] {
+        max-width: 100%;
+    }
+
+    .foodhub-coupon .btn {
+        width: 100%;
+    }
 }
 
 /* SMALL MOBILE */
@@ -1377,6 +1632,22 @@ img {
 
     .reservation-card h2 {
         font-size: 30px;
+    }
+
+    .foodhub-coupon {
+        padding: 20px 15px;
+    }
+
+    .foodhub-coupon h3 {
+        font-size: 20px;
+    }
+
+    .foodhub-coupon > p {
+        font-size: 12px;
+    }
+
+    .foodhub-coupon small {
+        font-size: 10px;
     }
 }
 

@@ -1,175 +1,638 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Food Hub Restaurant - Discover delicious food, fresh ingredients and unforgettable dining experiences.">
     <meta name="theme-color" content="#171717">
+
     <title>Food Hub Restaurant | Taste The Difference</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
+
 <body>
 
-<header class="header">
-    <nav class="navbar container">
-        <a href="index.html" class="logo">FOOD<span>HUB.</span></a>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar container">
 
-        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
+            <a href="index.html" class="logo">FOOD<span>HUB.</span></a>
 
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="menu.html">Our Menu</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <div class="nav-actions">
-            <a href="menu.html" class="cart-link">Cart <span class="cart-count">0</span></a>
-            <a href="contact.html#reservation" class="btn btn-primary nav-book">Book a Table ↗</a>
-        </div>
-    </nav>
-</header>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Our Menu</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-<main>
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <span class="eyebrow light-eyebrow">WELCOME TO FOOD HUB RESTAURANT</span>
-            <h1>Good Food.<br>Great <span>Memories.</span></h1>
-            <p>Discover the art of delicious dining. Fresh ingredients, incredible flavours and moments worth sharing.</p>
-            <div class="hero-buttons">
-                <a href="menu.html" class="btn btn-primary">Explore Our Menu ↗</a>
-                <a href="about.html" class="btn btn-outline">Discover Our Story</a>
+            <div class="nav-actions">
+                <a href="menu.html" class="cart-link">
+                    Cart <span class="cart-count">0</span>
+                </a>
+
+                <a href="contact.html#reservation" class="btn btn-primary nav-book">
+                    Book a Table ↗
+                </a>
             </div>
-            <div class="hero-bottom">
-                <div><strong>4.9/5</strong><span>Customer Rating</span></div>
-                <div><strong>100%</strong><span>Fresh Ingredients</span></div>
-                <div><strong>25+</strong><span>Signature Dishes</span></div>
-            </div>
-        </div>
-        <div class="hero-tag">MADE WITH LOVE ♥</div>
-    </section>
 
-    <section class="welcome section-padding">
-        <div class="container welcome-grid">
-            <div class="welcome-image reveal">
-                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Beautiful restaurant dining experience" loading="lazy">
-                <div class="image-note"><strong>Since 2015</strong><span>Serving happiness</span></div>
-            </div>
-            <div class="welcome-content reveal">
-                <span class="eyebrow">A LITTLE ABOUT US</span>
-                <h2>Where Every Meal<br>Becomes a <span>Memory.</span></h2>
-                <p>At Food Hub Restaurant, we believe great food brings people together. Our passion is creating unforgettable dishes using fresh ingredients, carefully crafted recipes and a whole lot of love.</p>
-                <p>Whether it's a casual lunch, a family dinner or a special celebration, there's always a place for you at our table.</p>
-                <a href="about.html" class="text-link">Discover Our Story <span>↗</span></a>
-            </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <section class="specials section-padding">
-        <div class="container">
-            <div class="section-heading reveal">
-                <div>
-                    <span class="eyebrow">OUR FAVOURITES</span>
-                    <h2>Today's <span>Specials</span></h2>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+
+                <span class="eyebrow light-eyebrow">
+                    WELCOME TO FOOD HUB RESTAURANT
+                </span>
+
+                <h1>
+                    Good Food.<br>
+                    Great <span>Memories.</span>
+                </h1>
+
+                <p>
+                    Discover the art of delicious dining. Fresh ingredients,
+                    incredible flavours and moments worth sharing.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn btn-primary">
+                        Explore Our Menu ↗
+                    </a>
+
+                    <a href="about.html" class="btn btn-outline">
+                        Discover Our Story
+                    </a>
                 </div>
-                <a href="menu.html" class="text-link">View Full Menu ↗</a>
+
+                <div class="hero-bottom">
+                    <div>
+                        <strong>4.9/5</strong>
+                        <span>Customer Rating</span>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <span>Fresh Ingredients</span>
+                    </div>
+
+                    <div>
+                        <strong>25+</strong>
+                        <span>Signature Dishes</span>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="food-grid">
-                <article class="food-card reveal">
-                    <div class="food-image">
-                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=700&q=80" alt="Classic cheese burger" loading="lazy">
-                        <span class="food-label">BESTSELLER</span>
-                    </div>
-                    <div class="food-info">
-                        <div><h3>Classic Cheese Burger</h3><span>Juicy beef, cheese, fresh lettuce</span></div>
-                        <div class="food-price">₹249</div>
-                    </div>
-                    <a href="menu.html" class="food-order">Explore Dish ↗</a>
-                </article>
+            <div class="hero-tag">MADE WITH LOVE ♥</div>
 
-                <article class="food-card reveal">
-                    <div class="food-image">
-                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80" alt="Creamy pasta" loading="lazy">
-                        <span class="food-label">CHEF'S PICK</span>
-                    </div>
-                    <div class="food-info">
-                        <div><h3>Creamy Italian Pasta</h3><span>Rich cream sauce and herbs</span></div>
-                        <div class="food-price">₹299</div>
-                    </div>
-                    <a href="menu.html" class="food-order">Explore Dish ↗</a>
-                </article>
+        </section>
 
-                <article class="food-card reveal">
-                    <div class="food-image">
-                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80" alt="Freshly baked pizza" loading="lazy">
-                        <span class="food-label">POPULAR</span>
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome section-padding">
+
+            <div class="container welcome-grid">
+
+                <div class="welcome-image reveal">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80"
+                        alt="Beautiful restaurant dining experience"
+                        loading="lazy"
+                    >
+
+                    <div class="image-note">
+                        <strong>Since 2015</strong>
+                        <span>Serving happiness</span>
                     </div>
-                    <div class="food-info">
-                        <div><h3>Farmhouse Pizza</h3><span>Loaded with veggies and cheese</span></div>
-                        <div class="food-price">₹349</div>
-                    </div>
-                    <a href="menu.html" class="food-order">Explore Dish ↗</a>
-                </article>
+
+                </div>
+
+                <div class="welcome-content reveal">
+
+                    <span class="eyebrow">A LITTLE ABOUT US</span>
+
+                    <h2>
+                        Where Every Meal<br>
+                        Becomes a <span>Memory.</span>
+                    </h2>
+
+                    <p>
+                        At Food Hub Restaurant, we believe great food brings
+                        people together. Our passion is creating unforgettable
+                        dishes using fresh ingredients, carefully crafted
+                        recipes and a whole lot of love.
+                    </p>
+
+                    <p>
+                        Whether it's a casual lunch, a family dinner or a
+                        special celebration, there's always a place for you
+                        at our table.
+                    </p>
+
+                    <a href="about.html" class="text-link">
+                        Discover Our Story <span>↗</span>
+                    </a>
+
+                </div>
+
             </div>
+
+        </section>
+
+
+        <!-- TODAY'S SPECIALS -->
+        <section class="specials section-padding">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div>
+                        <span class="eyebrow">OUR FAVOURITES</span>
+                        <h2>Today's <span>Specials</span></h2>
+                    </div>
+
+                    <a href="menu.html" class="text-link">
+                        View Full Menu ↗
+                    </a>
+
+                </div>
+
+
+                <div class="food-grid">
+
+                    <article class="food-card reveal">
+
+                        <div class="food-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=700&q=80"
+                                alt="Classic cheese burger"
+                                loading="lazy"
+                            >
+
+                            <span class="food-label">BESTSELLER</span>
+
+                        </div>
+
+                        <div class="food-info">
+
+                            <div>
+                                <h3>Classic Cheese Burger</h3>
+                                <span>Juicy beef, cheese, fresh lettuce</span>
+                            </div>
+
+                            <div class="food-price">₹249</div>
+
+                        </div>
+
+                        <a href="menu.html" class="food-order">
+                            Explore Dish ↗
+                        </a>
+
+                    </article>
+
+
+                    <article class="food-card reveal">
+
+                        <div class="food-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80"
+                                alt="Creamy pasta"
+                                loading="lazy"
+                            >
+
+                            <span class="food-label">CHEF'S PICK</span>
+
+                        </div>
+
+                        <div class="food-info">
+
+                            <div>
+                                <h3>Creamy Italian Pasta</h3>
+                                <span>Rich cream sauce and herbs</span>
+                            </div>
+
+                            <div class="food-price">₹299</div>
+
+                        </div>
+
+                        <a href="menu.html" class="food-order">
+                            Explore Dish ↗
+                        </a>
+
+                    </article>
+
+
+                    <article class="food-card reveal">
+
+                        <div class="food-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80"
+                                alt="Freshly baked pizza"
+                                loading="lazy"
+                            >
+
+                            <span class="food-label">POPULAR</span>
+
+                        </div>
+
+                        <div class="food-info">
+
+                            <div>
+                                <h3>Farmhouse Pizza</h3>
+                                <span>Loaded with veggies and cheese</span>
+                            </div>
+
+                            <div class="food-price">₹349</div>
+
+                        </div>
+
+                        <a href="menu.html" class="food-order">
+                            Explore Dish ↗
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OFFERS AND DISCOUNTS SECTION -->
+        <section class="offers-section" id="offers">
+
+            <div class="offers-container">
+
+                <div class="offers-heading reveal">
+
+                    <span class="offers-tag">SPECIAL DEALS</span>
+
+                    <h2>Offers You Can't Resist</h2>
+
+                    <p>
+                        Good food tastes even better with great savings!
+                        Explore our exclusive food offers.
+                    </p>
+
+                </div>
+
+
+                <div class="offers-grid">
+
+                    <!-- WEDNESDAY OFFER -->
+                    <div class="offer-card wednesday-offer reveal">
+
+                        <div class="offer-content">
+
+                            <span class="offer-label">
+                                WEDNESDAY SPECIAL
+                            </span>
+
+                            <h3>GET UP TO</h3>
+
+                            <h2>50% OFF</h2>
+
+                            <p>
+                                Enjoy amazing savings on your delivery order.
+                                A special treat for first-time customers!
+                            </p>
+
+                            <div class="coupon-code">
+
+                                <span>USE COUPON CODE</span>
+
+                                <strong>WED50</strong>
+
+                            </div>
+
+                            <small>
+                                Valid on Wednesdays only. First-time customers
+                                and delivery orders only. Maximum 3 redemptions
+                                per eligible customer.
+                            </small>
+
+                        </div>
+
+                        <div class="offer-decoration">50%</div>
+
+                    </div>
+
+
+                    <!-- WELCOME OFFER -->
+                    <div class="offer-card welcome-offer reveal">
+
+                        <div class="offer-content">
+
+                            <span class="offer-label">
+                                WELCOME TO FOOD HUB
+                            </span>
+
+                            <h3>YOUR FIRST ORDER?</h3>
+
+                            <h2>LET'S EAT!</h2>
+
+                            <p>
+                                Delicious food, fresh ingredients and
+                                exciting deals are waiting for you.
+                            </p>
+
+                            <a href="menu.html" class="offer-button">
+                                EXPLORE OUR MENU ↗
+                            </a>
+
+                        </div>
+
+                        <div class="offer-decoration">%</div>
+
+                    </div>
+
+                </div>
+
+
+                <p class="offers-terms">
+                    *Offers are subject to eligibility and applicable terms.
+                    Discount availability may vary.
+                </p>
+
+            </div>
+
+        </section>
+        <!-- END OFFERS SECTION -->
+
+
+        <!-- EXPERIENCE SECTION -->
+        <section class="experience section-padding">
+
+            <div class="container experience-grid">
+
+                <div class="experience-content reveal">
+
+                    <span class="eyebrow light-eyebrow">
+                        WHY FOOD HUB?
+                    </span>
+
+                    <h2>
+                        Not Just Food.<br>
+                        It's an <span>Experience.</span>
+                    </h2>
+
+                    <p>
+                        Every ingredient tells a story. Every dish is made
+                        with care. Every visit is an opportunity to create
+                        something special.
+                    </p>
+
+                    <a href="about.html" class="btn btn-primary">
+                        Know More About Us ↗
+                    </a>
+
+                </div>
+
+
+                <div class="experience-points reveal">
+
+                    <div class="experience-point">
+
+                        <span>01</span>
+
+                        <div>
+                            <h3>Fresh Ingredients</h3>
+                            <p>
+                                Only carefully selected, quality ingredients
+                                make it to your plate.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-point">
+
+                        <span>02</span>
+
+                        <div>
+                            <h3>Expert Chefs</h3>
+                            <p>
+                                Passionate chefs creating flavours that
+                                make you come back.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-point">
+
+                        <span>03</span>
+
+                        <div>
+                            <h3>Warm Hospitality</h3>
+                            <p>
+                                Great service and an atmosphere that feels
+                                like home.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials section-padding">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div>
+                        <span class="eyebrow">KIND WORDS</span>
+                        <h2>What People <span>Say</span></h2>
+                    </div>
+
+                </div>
+
+
+                <div class="review-grid">
+
+                    <article class="review-card reveal">
+
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "Amazing food, beautiful atmosphere and genuinely
+                            friendly staff. Definitely one of my favourite places!"
+                        </p>
+
+                        <h4>Priya Sharma</h4>
+                        <span>Regular Customer</span>
+
+                    </article>
+
+
+                    <article class="review-card reveal">
+
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "The pasta was incredible! Everything tasted fresh
+                            and the presentation was absolutely beautiful."
+                        </p>
+
+                        <h4>Arjun Mehta</h4>
+                        <span>Food Lover</span>
+
+                    </article>
+
+
+                    <article class="review-card reveal">
+
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "A wonderful place for family dinners. Great menu,
+                            generous portions and excellent service."
+                        </p>
+
+                        <h4>Neha Kapoor</h4>
+                        <span>Happy Guest</span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CALL TO ACTION -->
+        <section class="cta-section">
+
+            <div class="container cta-content">
+
+                <span class="eyebrow light-eyebrow">
+                    YOUR TABLE IS WAITING
+                </span>
+
+                <h2>
+                    Good Times Start<br>
+                    With <span>Great Food.</span>
+                </h2>
+
+                <a href="contact.html#reservation" class="btn btn-primary">
+                    Reserve Your Table ↗
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <a href="index.html" class="logo footer-logo">
+                    FOOD<span>HUB.</span>
+                </a>
+
+                <p>
+                    Good food, great memories.<br>
+                    Making every meal special.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="menu.html">Our Menu</a>
+                <a href="index.html#offers">Special Offers</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Opening Hours</h3>
+
+                <p>Monday – Friday: 11 AM – 10 PM</p>
+                <p>Saturday – Sunday: 10 AM – 11 PM</p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Get In Touch</h3>
+
+                <p>New Delhi, India</p>
+                <p>+91 98765 43210</p>
+                <p>hello@foodhub.com</p>
+
+            </div>
+
         </div>
-    </section>
 
-    <section class="experience section-padding">
-        <div class="container experience-grid">
-            <div class="experience-content reveal">
-                <span class="eyebrow light-eyebrow">WHY FOOD HUB?</span>
-                <h2>Not Just Food.<br>It's an <span>Experience.</span></h2>
-                <p>Every ingredient tells a story. Every dish is made with care. Every visit is an opportunity to create something special.</p>
-                <a href="about.html" class="btn btn-primary">Know More About Us ↗</a>
-            </div>
-            <div class="experience-points reveal">
-                <div class="experience-point"><span>01</span><div><h3>Fresh Ingredients</h3><p>Only carefully selected, quality ingredients make it to your plate.</p></div></div>
-                <div class="experience-point"><span>02</span><div><h3>Expert Chefs</h3><p>Passionate chefs creating flavours that make you come back.</p></div></div>
-                <div class="experience-point"><span>03</span><div><h3>Warm Hospitality</h3><p>Great service and an atmosphere that feels like home.</p></div></div>
-            </div>
+
+        <div class="container footer-bottom">
+
+            <span>
+                © 2026 Food Hub Restaurant. All rights reserved.
+            </span>
+
+            <span>
+                Made with ♥ for food lovers.
+            </span>
+
         </div>
-    </section>
 
-    <section class="testimonials section-padding">
-        <div class="container">
-            <div class="section-heading reveal">
-                <div><span class="eyebrow">KIND WORDS</span><h2>What People <span>Say</span></h2></div>
-            </div>
-            <div class="review-grid">
-                <article class="review-card reveal"><div class="stars">★★★★★</div><p>"Amazing food, beautiful atmosphere and genuinely friendly staff. Definitely one of my favourite places!"</p><h4>Priya Sharma</h4><span>Regular Customer</span></article>
-                <article class="review-card reveal"><div class="stars">★★★★★</div><p>"The pasta was incredible! Everything tasted fresh and the presentation was absolutely beautiful."</p><h4>Arjun Mehta</h4><span>Food Lover</span></article>
-                <article class="review-card reveal"><div class="stars">★★★★★</div><p>"A wonderful place for family dinners. Great menu, generous portions and excellent service."</p><h4>Neha Kapoor</h4><span>Happy Guest</span></article>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container cta-content">
-            <span class="eyebrow light-eyebrow">YOUR TABLE IS WAITING</span>
-            <h2>Good Times Start<br>With <span>Great Food.</span></h2>
-            <a href="contact.html#reservation" class="btn btn-primary">Reserve Your Table ↗</a>
-        </div>
-    </section>
-</main>
-
-<footer class="footer">
-    <div class="container footer-grid">
-        <div><a href="index.html" class="logo footer-logo">FOOD<span>HUB.</span></a><p>Good food, great memories.<br>Making every meal special.</p></div>
-        <div><h3>Quick Links</h3><a href="index.html">Home</a><a href="menu.html">Our Menu</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
-        <div><h3>Opening Hours</h3><p>Monday – Friday: 11 AM – 10 PM</p><p>Saturday – Sunday: 10 AM – 11 PM</p></div>
-        <div><h3>Get In Touch</h3><p>New Delhi, India</p><p>+91 98765 43210</p><p>hello@foodhub.com</p></div>
-    </div>
-    <div class="container footer-bottom"><span>© 2026 Food Hub Restaurant. All rights reserved.</span><span>Made with ♥ for food lovers.</span></div>
-</footer>
+    </footer>
 
 </body>
 </html>
