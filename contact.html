@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Food Hub Restaurant or reserve a table for your next dining experience.">
+    <meta name="theme-color" content="#171717">
+    <title>Contact & Reservations | Food Hub Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <nav class="navbar container">
+        <a href="index.html" class="logo">FOOD<span>HUB.</span></a>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-actions"><a href="menu.html" class="cart-link">Cart <span class="cart-count">0</span></a><a href="#reservation" class="btn btn-primary nav-book">Book a Table ↗</a></div>
+    </nav>
+</header>
+
+<main>
+    <section class="page-hero contact-hero">
+        <div class="container page-hero-content">
+            <span class="eyebrow light-eyebrow">WE'D LOVE TO HEAR FROM YOU</span>
+            <h1>Let's Get <span>In Touch.</span></h1>
+            <p>Questions, celebrations or just a craving for good food? We're here for you.</p>
+            <span class="breadcrumb"><a href="index.html">Home</a> / Contact</span>
+        </div>
+    </section>
+
+    <section class="section-padding contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info reveal">
+                <span class="eyebrow">GET IN TOUCH</span>
+                <h2>We'd Love To<br><span>Meet You.</span></h2>
+                <p>Visit us, give us a call or drop us a message. We're always happy to connect with fellow food lovers.</p>
+
+                <div class="contact-detail"><span class="detail-icon">⌖</span><div><h3>Our Location</h3><p>New Delhi, India</p></div></div>
+                <div class="contact-detail"><span class="detail-icon">☎</span><div><h3>Phone Number</h3><p>+91 98765 43210</p></div></div>
+                <div class="contact-detail"><span class="detail-icon">✉</span><div><h3>Email Address</h3><p>hello@foodhub.com</p></div></div>
+                <div class="contact-detail"><span class="detail-icon">◷</span><div><h3>Opening Hours</h3><p>Mon–Fri: 11 AM – 10 PM<br>Sat–Sun: 10 AM – 11 PM</p></div></div>
+            </div>
+
+            <div class="reservation-card reveal" id="reservation">
+                <span class="eyebrow">BOOK YOUR EXPERIENCE</span>
+                <h2>Reserve A <span>Table.</span></h2>
+                <p>Fill in your details and plan your next delicious experience.</p>
+
+                <form id="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group"><label for="guest-name">Your Name</label><input type="text" id="guest-name" placeholder="Enter your name" required minlength="2"></div>
+                        <div class="form-group"><label for="guest-email">Email Address</label><input type="email" id="guest-email" placeholder="Enter your email" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="guest-phone">Phone Number</label><input type="tel" id="guest-phone" placeholder="+91 98765 43210" required pattern="[0-9+() -]{7,18}"></div>
+                        <div class="form-group"><label for="guest-count">Number of Guests</label><select id="guest-count" required><option value="">Select guests</option><option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5 Guests</option><option>6 Guests</option><option>7 Guests</option><option>8+ Guests</option></select></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="booking-date">Reservation Date</label><input type="date" id="booking-date" required></div>
+                        <div class="form-group"><label for="booking-time">Reservation Time</label><select id="booking-time" required><option value="">Select time</option><option>11:00 AM</option><option>12:00 PM</option><option>01:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>05:00 PM</option><option>06:00 PM</option><option>07:00 PM</option><option>08:00 PM</option><option>09:00 PM</option></select></div>
+                    </div>
+                    <div class="form-group"><label for="guest-message">Special Requests (Optional)</label><textarea id="guest-message" rows="4" placeholder="Any special occasion or requests?"></textarea></div>
+                    <button type="submit" class="btn btn-primary form-submit">Confirm Reservation ↗</button>
+                    <p id="form-message" class="form-message" aria-live="polite"></p>
+                    <small class="form-note">Demo booking form. No actual reservation is submitted.</small>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-section">
+        <div class="container location-content reveal">
+            <div><span class="eyebrow">FIND YOUR WAY</span><h2>Come Visit <span>Us.</span></h2><p>We look forward to welcoming you at Food Hub Restaurant, New Delhi.</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=restaurants+New+Delhi" target="_blank" rel="noopener noreferrer" class="btn btn-dark">Explore Location ↗</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div><a href="index.html" class="logo footer-logo">FOOD<span>HUB.</span></a><p>Good food, great memories.<br>Making every meal special.</p></div>
+        <div><h3>Quick Links</h3><a href="index.html">Home</a><a href="menu.html">Our Menu</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+        <div><h3>Opening Hours</h3><p>Monday – Friday: 11 AM – 10 PM</p><p>Saturday – Sunday: 10 AM – 11 PM</p></div>
+        <div><h3>Get In Touch</h3><p>New Delhi, India</p><p>+91 98765 43210</p><p>hello@foodhub.com</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Food Hub Restaurant. All rights reserved.</span><span>Made with ♥ for food lovers.</span></div>
+</footer>
+</body>
+</html>
